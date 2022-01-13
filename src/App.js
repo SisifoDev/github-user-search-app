@@ -8,7 +8,7 @@ import NavBar from "./components/molecules/NavBar";
 import SearchBar from "./components/molecules/SearchBar";
 
 function App() {
-  const [search, setSearch] = useState("");
+  // const [search, setSearch] = useState("");
   const [userInfo, setUserInfo] = useState({});
 
   useEffect(() => {
