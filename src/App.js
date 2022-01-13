@@ -19,4 +19,12 @@ const Main = styled.main`
   display: flex;
   flex-direction: column;
   margin: 31px 24px;
+
+  @media (min-width: 768px) {
+    margin: 140px 98px;
+  }
+
+  @media (min-width: 1440px) {
+    margin: 144px 355px;
+  }
 `;

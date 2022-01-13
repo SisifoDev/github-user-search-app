@@ -1,11 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import IconMoon from "../atoms/IconMoon";
 
 export default function Toggle() {
   return (
     <ToggleWrapper>
       <ToogleText>Light</ToogleText>
-      <Icon src="assets/icon-moon.svg" />
+      <IconMoon fill="currentColor" width={20} height={20} />
     </ToggleWrapper>
   );
 }
@@ -15,9 +16,11 @@ const ToggleWrapper = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  color: var(--grayLight);
 
   &:hover {
     cursor: pointer;
+    color: #222731;
   }
 `;
 
@@ -29,11 +32,5 @@ const ToogleText = styled.span`
   line-height: 19px;
   letter-spacing: 2.5px;
   text-align: right;
-`;
-
-const Icon = styled.img`
-  width: 20px;
-  height: 20px;
-  color: currentColor;
-  margin-left: 16px;
+  margin-right: 16px;
 `;
