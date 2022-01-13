@@ -6,8 +6,18 @@ export default function Button({ children, onClick }) {
 }
 
 const StyledButton = styled.button`
-  left: 89.32%;
-  right: 0%;
-  top: 23.68%;
-  bottom: 23.68%;
+  color: var(--white);
+  font-family: Space Mono;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  background: var(--intenseBlue);
+  width: max-content;
+  height: 50px;
+  border-radius: 10px;
+  padding: 12px 23px;
+  &:hover {
+    opacity: 0.5;
+    cursor: pointer;
+  }
 `;

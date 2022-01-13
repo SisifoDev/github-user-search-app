@@ -73,12 +73,14 @@ td {
   margin: 0;
   padding: 0;
   border: 0;
+  box-sizing: border-box;
   outline: 0;
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
 }
 body {
+  background: #f6f8ff;
   margin: 0;
   padding: 0%;
   font-family: "Space Mono", monospace;
@@ -90,6 +92,26 @@ body {
 ol,
 ul {
   list-style: none;
+}
+
+input,
+label,
+select,
+button,
+textarea {
+  margin: 0;
+  border: none;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+  background: none;
+  line-height: 1;
+  outline: none;
+
+  /* Browsers have different default form fonts */
+  font-size: 13px;
+  font-family: Arial;
 }
 
 p {
