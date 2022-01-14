@@ -47,8 +47,8 @@ function App() {
       <>
         <GlobalStyles />
         <Main>
-          <button onClick={themeToggler}>Switch Theme</button>
-          <NavBar theme={theme} />
+          {/* <button onClick={themeToggler}>Switch Theme</button> */}
+          <NavBar theme={theme} onClick={themeToggler} />
           <SearchBar />
           <Content
             name={userInfo.name}

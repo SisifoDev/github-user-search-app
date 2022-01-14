@@ -3,11 +3,11 @@ import styled from "styled-components";
 import Title from "../atoms/Title";
 import Toggle from "./Toggle";
 
-export default function NavBar({ theme }) {
+export default function NavBar({ theme, onClick }) {
   return (
     <Nav>
       <Title>devfinder</Title>
-      <Toggle theme={theme} />
+      <Toggle theme={theme} onClick={onClick} />
     </Nav>
   );
 }
