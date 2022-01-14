@@ -30,7 +30,7 @@ export default function Content({
 }
 
 const SectionContent = styled.section`
-  background: var(--white);
+  background: ${({ theme }) => theme.bgCard};
   width: 100%;
   border-radius: 15px;
   margin-top: 16px;

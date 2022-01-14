@@ -2,12 +2,24 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 import styled from "styled-components";
-import Content from "./components/molecules/Content";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyles } from "./components/globalStyles";
+import { lightTheme, darkTheme } from "./components/Theme";
 
+import Content from "./components/molecules/Content";
 import NavBar from "./components/molecules/NavBar";
 import SearchBar from "./components/molecules/SearchBar";
 
 function App() {
+  const userTheme = window.matchMedia("(prefers-color-scheme: light)").matches
+    ? "darkTheme"
+    : "lightTheme";
+
+  const [theme, setTheme] = useState(userTheme);
+  const themeToggler = () => {
+    theme === "light" ? setTheme("dark") : setTheme("light");
+  };
+
   // const [search, setSearch] = useState("octocat");
   const search = "octocat";
   const [userInfo, setUserInfo] = useState({});
@@ -20,23 +32,37 @@ function App() {
 
     consultaAPI();
   }, [search]);
-  const joinedDate = new Date(userInfo.created_at).toDateString();
-  console.log(userInfo);
+  const options = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+  const joinedDate = new Date(userInfo.created_at).toLocaleDateString(
+    "en-EN",
+    options
+  );
+
   return (
-    <Main>
-      <NavBar />
-      <SearchBar />
-      <Content
-        name={userInfo.name}
-        user={userInfo.login}
-        avatar={userInfo.avatar_url}
-        date={joinedDate}
-        repos={userInfo.public_repos}
-        followers={userInfo.followers}
-        following={userInfo.following}
-        bio={userInfo.bio}
-      />
-    </Main>
+    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+      <>
+        <GlobalStyles />
+        <Main>
+          <button onClick={themeToggler}>Switch Theme</button>
+          <NavBar theme={theme} />
+          <SearchBar />
+          <Content
+            name={userInfo.name}
+            user={userInfo.login}
+            avatar={userInfo.avatar_url}
+            date={joinedDate}
+            repos={userInfo.public_repos}
+            followers={userInfo.followers}
+            following={userInfo.following}
+            bio={userInfo.bio}
+          />
+        </Main>
+      </>
+    </ThemeProvider>
   );
 }
 

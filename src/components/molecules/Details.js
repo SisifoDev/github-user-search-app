@@ -23,7 +23,7 @@ export default function Details({ repos, followers, following }) {
 }
 
 const DetailsWrapper = styled.div`
-  background: #f6f8ff;
+  background: ${({ theme }) => theme.body};
   margin: 24px 0;
   padding: 18px 15px;
   border-radius: 10px;

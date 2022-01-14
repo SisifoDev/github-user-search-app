@@ -1,12 +1,22 @@
 import React from "react";
 import styled from "styled-components";
 import IconMoon from "../atoms/IconMoon";
+import IconSun from "../atoms/IconSun";
 
-export default function Toggle() {
+export default function Toggle({ theme }) {
   return (
     <ToggleWrapper>
-      <ToogleText>Light</ToogleText>
-      <IconMoon fill="currentColor" width={20} height={20} />
+      {theme === "light" ? (
+        <>
+          <ToogleText>Light</ToogleText>
+          <IconSun fill="currentColor" width={20} height={20} />
+        </>
+      ) : (
+        <>
+          <ToogleText>Night</ToogleText>
+          <IconMoon fill="currentColor" width={20} height={20} />
+        </>
+      )}
     </ToggleWrapper>
   );
 }

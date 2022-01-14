@@ -6,12 +6,12 @@ export default function Button({ children, onClick }) {
 }
 
 const StyledButton = styled.button`
-  color: var(--white);
+  color: ${({ theme }) => theme.text};
   font-family: Space Mono;
   font-size: 16px;
   line-height: 24px;
   font-weight: 700;
-  background: var(--intenseBlue);
+  background: ${({ theme }) => theme.intenseBlue};
   width: max-content;
   height: 50px;
   border-radius: 10px;
