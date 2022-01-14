@@ -3,17 +3,17 @@ import styled from "styled-components";
 import IconMoon from "../atoms/IconMoon";
 import IconSun from "../atoms/IconSun";
 
-export default function Toggle({ theme }) {
+export default function Toggle({ theme, onClick }) {
   return (
-    <ToggleWrapper>
-      {theme === "light" ? (
+    <ToggleWrapper onClick={onClick}>
+      {theme !== "light" ? (
         <>
           <ToogleText>Light</ToogleText>
           <IconSun fill="currentColor" width={20} height={20} />
         </>
       ) : (
         <>
-          <ToogleText>Night</ToogleText>
+          <ToogleText>Dark</ToogleText>
           <IconMoon fill="currentColor" width={20} height={20} />
         </>
       )}
@@ -21,12 +21,13 @@ export default function Toggle({ theme }) {
   );
 }
 
-const ToggleWrapper = styled.div`
+const ToggleWrapper = styled.button`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  color: var(--grayLight);
+  color: ${({ theme }) => theme.text};
+  transition: all 0.5s linear;
 
   &:hover {
     cursor: pointer;
