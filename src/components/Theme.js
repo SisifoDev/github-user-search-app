@@ -5,6 +5,7 @@ export const lightTheme = {
   text: "#4B6A9B",
   strongText: "#2B3442",
   active: "rgba(#4B6A9B, 0.5)",
+  shadow: "0px 16px 30px -10px rgba(70, 96, 187, 0.198567)",
 };
 export const darkTheme = {
   intenseBlue: "#0079FF",
@@ -13,4 +14,5 @@ export const darkTheme = {
   text: "#FFFFFF",
   strongText: "#FFFFFF",
   active: "rgba(#FFFFFF, 0.5)",
+  shadow: "none",
 };

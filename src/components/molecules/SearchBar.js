@@ -26,7 +26,7 @@ const SearchWrap = styled.div`
   justify-content: space-between;
   padding: 16px 7px 16px 7px;
   margin-top: 36px;
-  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+  box-shadow: ${({ theme }) => theme.shadow};
 `;
 
 const TextIconWrapper = styled.div`
