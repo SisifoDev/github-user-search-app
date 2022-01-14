@@ -6,7 +6,7 @@ export default function Button({ children, onClick }) {
 }
 
 const StyledButton = styled.button`
-  color: ${({ theme }) => theme.text};
+  color: #ffffff;
   font-family: Space Mono;
   font-size: 16px;
   line-height: 24px;
@@ -17,7 +17,6 @@ const StyledButton = styled.button`
   border-radius: 10px;
   padding: 12px 23px;
   &:hover {
-    color: #ffffff;
     opacity: 0.5;
     cursor: pointer;
   }

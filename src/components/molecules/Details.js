@@ -1,22 +1,22 @@
 import React from "react";
 import styled from "styled-components";
+import Heading2 from "../atoms/Heading2";
 import Paragraph from "../atoms/Paragraph";
-import Title from "../atoms/Title";
 
 export default function Details({ repos, followers, following }) {
   return (
     <DetailsWrapper>
       <DetailsContent>
         <Paragraph>Repos</Paragraph>
-        <Title>{repos}</Title>
+        <Heading2>{repos}</Heading2>
       </DetailsContent>
       <DetailsContent>
         <Paragraph>Followers</Paragraph>
-        <Title>{followers}</Title>
+        <Heading2>{followers}</Heading2>
       </DetailsContent>
       <DetailsContent>
         <Paragraph>Following</Paragraph>
-        <Title>{following}</Title>
+        <Heading2>{following}</Heading2>
       </DetailsContent>
     </DetailsWrapper>
   );

@@ -24,7 +24,7 @@ const SearchWrap = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 7px 16px 7px;
+  padding: 16px 7px 16px 20px;
   margin-top: 36px;
   box-shadow: ${({ theme }) => theme.shadow};
 `;
@@ -42,7 +42,7 @@ const TextIconWrapper = styled.div`
     width: 100%;
     color: ${({ theme }) => theme.strongText};
     font-family: "Space Mono", monospace;
-    font-size: 12px;
+    font-size: 13px;
     font-style: normal;
     font-weight: 400;
     line-height: 25px;
