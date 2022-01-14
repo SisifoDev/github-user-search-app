@@ -9,6 +9,7 @@ const Heading1 = styled.h1`
   font-size: 26px;
   font-style: normal;
   font-weight: 700;
+  color: ${({ theme }) => theme.strongText};
   line-height: 38px;
   letter-spacing: 0px;
   text-align: left;

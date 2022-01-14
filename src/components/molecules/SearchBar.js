@@ -7,7 +7,7 @@ export default function SearchBar() {
   return (
     <SearchWrap>
       <TextIconWrapper>
-        <IconSearch width={20} height={20} fill="var(--intenseBlue)" />
+        <IconSearch width={20} height={20} fill="#0079ff" />
 
         <input type="text" placeholder="Search GitHub username…" />
       </TextIconWrapper>
@@ -17,7 +17,7 @@ export default function SearchBar() {
 }
 
 const SearchWrap = styled.div`
-  background: var(--white);
+  background: ${({ theme }) => theme.bgCard};
   height: 60px;
   width: 100%;
   border-radius: 15px;
@@ -40,7 +40,7 @@ const TextIconWrapper = styled.div`
     border: none;
     background: transparent;
     width: 100%;
-    color: var(--grayLight);
+    color: ${({ theme }) => theme.strongText};
     font-family: "Space Mono", monospace;
     font-size: 12px;
     font-style: normal;

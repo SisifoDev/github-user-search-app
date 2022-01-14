@@ -6,7 +6,7 @@ export default function Paragraph({ children }) {
 }
 
 const ParagraphStyled = styled.p`
-  color: var(--grayLight);
+  color: ${({ theme }) => theme.text};
   font-size: 13px;
   font-style: normal;
   font-weight: 400;

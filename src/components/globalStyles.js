@@ -1,13 +1,5 @@
-:root {
-  /* Colors */
-  --intenseBlue: #0079ff;
-  --darkGray: #4b6a9b;
-  --grayLight: #697c9a;
-  --blackLightMode: #2b3442;
-  --blackDarkMode: #141d2f;
-  --grayDarkMode: #1e2a47;
-  --white: #ffffff;
-}
+import { createGlobalStyle } from "styled-components";
+export const GlobalStyles = createGlobalStyle`
 html,
 body,
 div,
@@ -79,18 +71,20 @@ td {
   vertical-align: baseline;
   background: transparent;
 }
-body {
-  background: #f6f8ff;
-  margin: 0;
-  padding: 0%;
-  font-family: "Space Mono", monospace;
-  color: var(--blackLightMode);
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-input,
+  body {
+    background: ${({ theme }) => theme.body};
+    color: ${({ theme }) => theme.text};
+    font-family: "Space Mono", monospace;
+    margin: 0;
+    padding: 0%;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transition: all 0.50s linear;
+  }
+
+  input,
 button,
 textarea {
   margin: 0;
@@ -102,7 +96,6 @@ textarea {
   background: none;
   line-height: 1;
   outline: none;
-
   /* Browsers have different default form fonts */
   font-size: 13px;
   font-family: "Space Mono", monospace;
@@ -116,8 +109,4 @@ p {
   letter-spacing: 0px;
   text-align: left;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
+  `;
