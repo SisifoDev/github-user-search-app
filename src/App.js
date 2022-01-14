@@ -9,7 +9,7 @@ import SearchBar from "./components/molecules/SearchBar";
 
 function App() {
   // const [search, setSearch] = useState("octocat");
-  const search = "octocat";
+  const search = "juanestban";
   const [userInfo, setUserInfo] = useState({});
 
   useEffect(() => {
@@ -20,8 +20,16 @@ function App() {
 
     consultaAPI();
   }, [search]);
-  const joinedDate = new Date(userInfo.created_at).toDateString();
-  console.log(userInfo);
+  const options = {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  };
+  const joinedDate = new Date(userInfo.created_at).toLocaleDateString(
+    "en-EN",
+    options
+  );
+
   return (
     <Main>
       <NavBar />

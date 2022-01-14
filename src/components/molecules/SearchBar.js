@@ -8,9 +8,8 @@ export default function SearchBar() {
     <SearchWrap>
       <TextIconWrapper>
         <IconSearch width={20} height={20} fill="var(--intenseBlue)" />
-        <form action="">
-          <input type="text" placeholder="Search GitHub username…" />
-        </form>
+
+        <input type="text" placeholder="Search GitHub username…" />
       </TextIconWrapper>
       <Button>Search</Button>
     </SearchWrap>
