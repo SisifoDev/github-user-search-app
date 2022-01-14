@@ -19,7 +19,9 @@ export default function Content({
     <SectionContent>
       <DevInfo name={name} user={user} avatar={avatar} date={date} />
       <SectionContentWrapper>
-        <Paragraph>{bio}</Paragraph>
+        <Paragraph>
+          {bio === null ? "No information available 😔" : bio}
+        </Paragraph>
         <Details repos={repos} followers={followers} following={following} />
         <SocialLinks />
       </SectionContentWrapper>
