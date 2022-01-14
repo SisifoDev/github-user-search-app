@@ -1,16 +1,18 @@
 import React from "react";
 import styled from "styled-components";
 import Avatar from "../atoms/Avatar";
+import Heading2 from "../atoms/Heading2";
 import Paragraph from "../atoms/Paragraph";
-import Title from "../atoms/Title";
 
 export default function DevInfo({ name, user, avatar, date }) {
   return (
     <DevInfoWrapper>
       <Avatar avatar={avatar} />
       <div>
-        <Title>{name}</Title>
-        <Paragraph>@{user}</Paragraph>
+        <Heading2>{name}</Heading2>
+        <Paragraph>
+          <a href="/">@{user}</a>
+        </Paragraph>
         <Paragraph>Joined {date}</Paragraph>
       </div>
     </DevInfoWrapper>

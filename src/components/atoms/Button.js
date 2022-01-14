@@ -6,7 +6,7 @@ export default function Button({ children, onClick }) {
 }
 
 const StyledButton = styled.button`
-  color: ${({ theme }) => theme.text};
+  color: #ffffff;
   font-family: Space Mono;
   font-size: 16px;
   line-height: 24px;

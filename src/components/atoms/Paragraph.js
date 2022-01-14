@@ -13,4 +13,9 @@ const ParagraphStyled = styled.p`
   line-height: 25px;
   letter-spacing: 0px;
   text-align: left;
+
+  & a {
+    color: ${({ theme }) => theme.intenseBlue};
+    text-decoration: none;
+  }
 `;

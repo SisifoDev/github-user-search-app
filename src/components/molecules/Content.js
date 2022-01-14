@@ -34,7 +34,7 @@ const SectionContent = styled.section`
   width: 100%;
   border-radius: 15px;
   margin-top: 16px;
-  box-shadow: 0px 16px 30px -10px rgba(70, 96, 187, 0.198567);
+  box-shadow: ${({ theme }) => theme.shadow};
 `;
 
 const SectionContentWrapper = styled.div`
