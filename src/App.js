@@ -8,7 +8,8 @@ import NavBar from "./components/molecules/NavBar";
 import SearchBar from "./components/molecules/SearchBar";
 
 function App() {
-  const [search, setSearch] = useState("octocat");
+  // const [search, setSearch] = useState("octocat");
+  const search = "octocat";
   const [userInfo, setUserInfo] = useState({});
 
   useEffect(() => {

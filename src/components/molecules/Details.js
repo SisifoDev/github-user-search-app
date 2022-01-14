@@ -6,18 +6,18 @@ import Title from "../atoms/Title";
 export default function Details({ repos, followers, following }) {
   return (
     <DetailsWrapper>
-      <div>
+      <DetailsContent>
         <Paragraph>Repos</Paragraph>
         <Title>{repos}</Title>
-      </div>
-      <div>
+      </DetailsContent>
+      <DetailsContent>
         <Paragraph>Followers</Paragraph>
         <Title>{followers}</Title>
-      </div>
-      <div>
+      </DetailsContent>
+      <DetailsContent>
         <Paragraph>Following</Paragraph>
         <Title>{following}</Title>
-      </div>
+      </DetailsContent>
     </DetailsWrapper>
   );
 }
@@ -29,4 +29,11 @@ const DetailsWrapper = styled.div`
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
+`;
+
+const DetailsContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
