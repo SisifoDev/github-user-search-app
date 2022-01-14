@@ -10,7 +10,7 @@ export default function DevInfo({ name, user, avatar, date }) {
       <Avatar avatar={avatar} />
       <div>
         <Title>{name}</Title>
-        <Paragraph>{user}</Paragraph>
+        <Paragraph>@{user}</Paragraph>
         <Paragraph>Joined {date}</Paragraph>
       </div>
     </DevInfoWrapper>

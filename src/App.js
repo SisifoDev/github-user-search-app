@@ -8,17 +8,17 @@ import NavBar from "./components/molecules/NavBar";
 import SearchBar from "./components/molecules/SearchBar";
 
 function App() {
-  // const [search, setSearch] = useState("");
+  const [search, setSearch] = useState("octocat");
   const [userInfo, setUserInfo] = useState({});
 
   useEffect(() => {
     const consultaAPI = async () => {
-      const consulta = await axios("https://api.github.com/users/octocat");
+      const consulta = await axios(`https://api.github.com/users/${search}`);
       setUserInfo(consulta.data);
     };
 
     consultaAPI();
-  }, []);
+  }, [search]);
   const joinedDate = new Date(userInfo.created_at).toDateString();
   console.log(userInfo);
   return (
@@ -30,6 +30,10 @@ function App() {
         user={userInfo.login}
         avatar={userInfo.avatar_url}
         date={joinedDate}
+        repos={userInfo.public_repos}
+        followers={userInfo.followers}
+        following={userInfo.following}
+        bio={userInfo.bio}
       />
     </Main>
   );

@@ -3,20 +3,20 @@ import styled from "styled-components";
 import Paragraph from "../atoms/Paragraph";
 import Title from "../atoms/Title";
 
-export default function Details() {
+export default function Details({ repos, followers, following }) {
   return (
     <DetailsWrapper>
       <div>
         <Paragraph>Repos</Paragraph>
-        <Title>8</Title>
+        <Title>{repos}</Title>
       </div>
       <div>
         <Paragraph>Followers</Paragraph>
-        <Title>3938</Title>
+        <Title>{followers}</Title>
       </div>
       <div>
         <Paragraph>Following</Paragraph>
-        <Title>8</Title>
+        <Title>{following}</Title>
       </div>
     </DetailsWrapper>
   );

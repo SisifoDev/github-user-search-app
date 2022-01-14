@@ -5,16 +5,22 @@ import Details from "./Details";
 import DevInfo from "./DevInfo";
 import SocialLinks from "./SocialLinks";
 
-export default function Content({ name, user, avatar, date }) {
+export default function Content({
+  name,
+  user,
+  avatar,
+  date,
+  repos,
+  followers,
+  following,
+  bio,
+}) {
   return (
     <SectionContent>
       <DevInfo name={name} user={user} avatar={avatar} date={date} />
       <SectionContentWrapper>
-        <Paragraph>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
-          Quisque volutpat mattis eros.
-        </Paragraph>
-        <Details />
+        <Paragraph>{bio}</Paragraph>
+        <Details repos={repos} followers={followers} following={following} />
         <SocialLinks />
       </SectionContentWrapper>
     </SectionContent>
