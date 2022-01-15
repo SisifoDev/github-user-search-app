@@ -13,6 +13,7 @@ export default function SearchBar({ setSearch }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     setSearch(inputValue);
+    setInputValue("");
   };
   return (
     <SearchWrap>
@@ -51,6 +52,10 @@ const TextIconWrapper = styled.div`
   width: 100%;
   gap: 8px;
   align-items: center;
+
+  & form {
+    width: 100%;
+  }
 
   & input {
     border: none;
