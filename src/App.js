@@ -20,8 +20,8 @@ function App() {
     theme === "light" ? setTheme("dark") : setTheme("light");
   };
 
-  // const [search, setSearch] = useState("octocat");
-  const search = "octocat";
+  const [search, setSearch] = useState("octocat");
+  // const search = "octocat";
   const [userInfo, setUserInfo] = useState({});
 
   useEffect(() => {
@@ -49,7 +49,7 @@ function App() {
         <Main>
           {/* <button onClick={themeToggler}>Switch Theme</button> */}
           <NavBar theme={theme} onClick={themeToggler} />
-          <SearchBar />
+          <SearchBar setSearch={setSearch} />
           <Content
             name={userInfo.name}
             user={userInfo.login}
