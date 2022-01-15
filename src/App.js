@@ -76,6 +76,7 @@ const Main = styled.main`
 
   @media (min-width: 768px) {
     margin: 140px 98px;
+    gap: 10px;
   }
 
   @media (min-width: 1440px) {

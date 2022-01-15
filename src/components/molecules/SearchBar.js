@@ -40,7 +40,8 @@ const TextIconWrapper = styled.div`
     border: none;
     background: transparent;
     width: 100%;
-    color: ${({ theme }) => theme.strongText};
+    color: ${({ theme }) => theme.text};
+    opacity: 0.9;
     font-family: "Space Mono", monospace;
     font-size: 13px;
     font-style: normal;
@@ -48,5 +49,12 @@ const TextIconWrapper = styled.div`
     line-height: 25px;
     letter-spacing: 0px;
     text-align: left;
+  }
+
+  @media (min-width: 768px) {
+    gap: 24px;
+    & input {
+      font-size: 18px;
+    }
   }
 `;

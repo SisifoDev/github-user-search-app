@@ -14,8 +14,7 @@ const ParagraphStyled = styled.p`
   letter-spacing: 0px;
   text-align: left;
 
-  & a {
-    color: ${({ theme }) => theme.intenseBlue};
-    text-decoration: none;
+  @media (min-width: 768px) {
+    font-size: 15px;
   }
 `;

@@ -12,7 +12,7 @@ export const darkTheme = {
   body: "#141D2F",
   bgCard: "#1E2A47",
   text: "#FFFFFF",
-  strongText: "#FFFFFF",
+  strongText: "rgba(#FFFFFF, 0.5)",
   active: "rgba(#FFFFFF, 0.5)",
   shadow: "none",
 };

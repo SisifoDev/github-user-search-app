@@ -31,7 +31,8 @@ const ToggleWrapper = styled.button`
 
   &:hover {
     cursor: pointer;
-    color: #222731;
+    color: ${({ theme }) => theme.text};
+    opacity: 0.5;
   }
 `;
 

@@ -13,4 +13,12 @@ const Heading2Styled = styled.h2`
   line-height: 24px;
 
   text-align: left;
+
+  @media (min-width: 768px) {
+    font-size: 22px;
+    line-height: 33px;
+    /* identical to box height */
+
+    /* text-transform: uppercase; */
+  }
 `;
