@@ -8,13 +8,13 @@ export default function DevInfo({ name, user, avatar, date }) {
   return (
     <DevInfoWrapper>
       <Avatar avatar={avatar} />
-      <div>
+      <UserInfo>
         <Heading2>{name}</Heading2>
         <Paragraph>
-          <a href="/">@{user}</a>
+          <UserLink href="/">@{user}</UserLink>
         </Paragraph>
         <Paragraph>Joined {date}</Paragraph>
-      </div>
+      </UserInfo>
     </DevInfoWrapper>
   );
 }
@@ -22,6 +22,34 @@ export default function DevInfo({ name, user, avatar, date }) {
 const DevInfoWrapper = styled.div`
   display: flex;
   gap: 19px;
+  justify-content: start;
   align-items: center;
-  padding: 32px 24px;
+  padding-bottom: 32px;
+`;
+
+const UserInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 1440px) {
+    display: grid;
+    grid-template-areas:
+      "top top"
+      "bottom bottom";
+
+    :nth-child(1) {
+      grid-area: top;
+    }
+    :nth-child(2) {
+      grid-area: bottom bottom;
+    }
+    :nth-child(3) {
+      grid-area: top;
+    }
+  }
+`;
+
+const UserLink = styled.a`
+  color: ${({ theme }) => theme.intenseBlue};
+  text-decoration: none;
 `;

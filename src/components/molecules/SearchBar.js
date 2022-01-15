@@ -3,15 +3,31 @@ import styled from "styled-components";
 import Button from "../atoms/Button";
 import IconSearch from "../atoms/IconSearch";
 
-export default function SearchBar() {
+export default function SearchBar({ setSearch }) {
+  const [inputValue, setInputValue] = React.useState("");
+
+  const handleInputChange = (e) => {
+    setInputValue(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSearch(inputValue);
+  };
   return (
     <SearchWrap>
       <TextIconWrapper>
         <IconSearch width={20} height={20} fill="#0079ff" />
-
-        <input type="text" placeholder="Search GitHub username…" />
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            value={inputValue}
+            onChange={handleInputChange}
+            placeholder="Search GitHub username…"
+          />
+        </form>
       </TextIconWrapper>
-      <Button>Search</Button>
+      <Button onClick={handleSubmit}>Search</Button>
     </SearchWrap>
   );
 }
@@ -40,7 +56,8 @@ const TextIconWrapper = styled.div`
     border: none;
     background: transparent;
     width: 100%;
-    color: ${({ theme }) => theme.strongText};
+    color: ${({ theme }) => theme.text};
+    opacity: 0.9;
     font-family: "Space Mono", monospace;
     font-size: 13px;
     font-style: normal;
@@ -48,5 +65,12 @@ const TextIconWrapper = styled.div`
     line-height: 25px;
     letter-spacing: 0px;
     text-align: left;
+  }
+
+  @media (min-width: 768px) {
+    gap: 24px;
+    & input {
+      font-size: 18px;
+    }
   }
 `;

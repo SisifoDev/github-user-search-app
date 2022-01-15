@@ -15,5 +15,10 @@ const AvatarWrappper = styled.div`
     width: 70px;
     height: 70px;
     border-radius: 50%;
+
+    @media (min-width: 768px) {
+      width: 117px;
+      height: 117px;
+    }
   }
 `;
