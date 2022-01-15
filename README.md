@@ -2,7 +2,7 @@
 
 This is a solution to the [GitHub user search app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/github-user-search-app-Q09YOgaH6). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
 
-![](./preview.jpg)
+![Design preview for the GitHub user search app coding challenge](./preview.jpg)
 
 ## Table of contents
 
@@ -37,7 +37,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](./Screenshot.png)
+![](Screenshot.png)
 
 Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
 
